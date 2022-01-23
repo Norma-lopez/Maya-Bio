@@ -1,0 +1,241 @@
+.appWhatsapp img{
+	width: 40px; 
+	height:40px;
+}
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	right:0; /* Establecemos la barra en la derecha */
+	bottom:95px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		background-image:none !important;;
+		padding: 8px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social ul li a img:hover {
+		 -webkit-transform: scale(1.5);
+         transform: scale(1.5) /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+.cresta-whatsapp-chat-box,
+.cresta-whatsapp-chat-button{z-index:1000000}
+.cresta-whatsapp-chat-container,
+.cresta-whatsapp-chat-container-button{z-index:999999}
+.cresta-whatsapp-chat-overlay{z-index:999998}
+.cresta-whatsapp-chat-box{
+	width:46px;
+	height:46px;
+	display:block;
+	position:fixed;
+	bottom:55px;
+	right:14px;
+	cursor:pointer;
+	text-align:center;
+	line-height:60px;
+	background:#3ddb37;
+	border-radius:100%;
+	-webkit-box-shadow:1px 1px 4px 0px rgba(0,0,0,.3);
+	-moz-box-shadow:1px 1px 4px 0px rgba(0,0,0,.3);
+	box-shadow:1px 1px 4px 0px rgba(0,0,0,.3)}
+.cresta-whatsapp-chat-box svg#whatsapp-msng-icon{
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:8px;
+	left:8px;
+    opacity:1;
+    overflow:hidden;
+    -webkit-transition:opacity 160ms ease-in-out;
+    -moz-transition:opacity 160ms ease-in-out;
+    -o-transition:opacity 160ms ease-in-out;
+    transition:opacity 160ms ease-in-out}
+.cresta-whatsapp-chat-box svg#close-icon{
+	opacity:0;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:14px;
+	left:14px;
+	-webkit-transition:opacity 160ms ease-in-out;
+	-moz-transition:opacity 160ms ease-in-out;
+	-o-transition:opacity 160ms ease-in-out;
+	transition:opacity 160ms ease-in-out}
+.cresta-whatsapp-chat-box.open svg#whatsapp-msng-icon{opacity:0}
+.cresta-whatsapp-chat-box.open svg#close-icon{opacity:1}
+.cresta-whatsapp-chat-container{
+	position:fixed;
+	bottom:105px;
+	right:14px;
+	transform:translateY(50px);
+	opacity:0;border-radius:10px;
+	pointer-events:none;
+	box-shadow:0 1px 6px rgba(0,0,0,0.06),0 2px 32px rgba(0,0,0,0.16);
+	-webkit-transition:transform 160ms ease-in-out,opacity 160ms ease-in-out;
+	-moz-transition:transform 160ms ease-in-out,opacity 160ms ease-in-out;
+	-o-transition:transform 160ms ease-in-out,opacity 160ms ease-in-out;
+	transition:transform 160ms ease-in-out,opacity 160ms ease-in-out}
+.cresta-whatsapp-chat-container iframe,
+.cresta-whatsapp-chat-container-button iframe{border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px}
+.cresta-whatsapp-chat-container.open{opacity:1;transform:translateY(0px);
+	pointer-events:all}
+.cresta-whatsapp-chat-top-header{
+	display:block;
+	position:relative;
+	width:300px;
+	background:#64b161;
+	color:#fff;
+	text-align:center;
+	padding:10px;
+	font-size:14px;
+	line-height:1;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px}
+.cresta-whatsapp-inner{
+	width:300px;
+	height:280px;
+	background:#fff;
+	position:relative}
+.cresta-whatsapp-inner textarea.cresta-whatsapp-textarea{
+	border:0!important;
+	outline:none;
+	resize:none;
+	height:100%;
+	width:100%;
+	background:transparent!important;
+	border-radius:0!important;
+	color:#000;
+	padding:20px 40px!important;
+	transition:none;
+    font-size:smaller;}
+.cresta-whatsapp-inner textarea.cresta-whatsapp-textarea:focus,.cresta-whatsapp-inner textarea.cresta-whatsapp-textarea:hover{
+	background:transparent!important;
+	border-radius:0!important;
+	border:0!important}
+.cresta-whatsapp-inner textarea.cresta-whatsapp-textarea::-webkit-input-placeholder{
+	color:#cfcfcf}
+.cresta-whatsapp-inner textarea.cresta-whatsapp-textarea::-moz-placeholder{
+	color:#cfcfcf}
+.cresta-whatsapp-inner textarea.cresta-whatsapp-textarea:-ms-input-placeholder{
+	color:#cfcfcf}
+.cresta-whatsapp-inner textarea.cresta-whatsapp-textarea:-moz-placeholder{
+	color:#cfcfcf}
+.cresta-whatsapp-to-send{
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px}
+.cresta-whatsapp-to-send .cresta-whatsapp-send{
+	width:100%;
+	border-radius:0;
+	outline:none;
+	box-shadow:none;
+	border:0;
+	line-height:1;
+	text-decoration:none;
+	padding:18px 0;
+	background:#64b161;
+	color:#fff;
+	text-align:center;
+	display:inline-block;
+	cursor:pointer;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	margin:0;
+	min-height:auto;
+	font-size:inherit;
+	font-family:inherit}
+.cresta-whatsapp-to-send #whatsapp-msng-icon-send{
+	position:relative;
+	left:0;
+	top:1px;
+	-o-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	transition:all .2s ease-in-out}
+body.rtl .cresta-whatsapp-to-send #whatsapp-msng-icon-send{
+	right:0;transform:rotate(180deg)}
+.cresta-whatsapp-to-send:hover #whatsapp-msng-icon-send,.cresta-whatsapp-to-send:focus #whatsapp-msng-icon-send,.cresta-whatsapp-to-send:active #whatsapp-msng-icon-send{
+	left:7px}
+body.rtl .cresta-whatsapp-to-send:hover #whatsapp-msng-icon-send,body.rtl .cresta-whatsapp-to-send:focus #whatsapp-msng-icon-send,body.rtl .cresta-whatsapp-to-send:active #whatsapp-msng-icon-send{
+	right:7px;
+	left:inherit
+		}
+.cresta-whatsapp-chat-button{
+	position:relative;
+	display:inline-block;
+	padding:10px 15px;
+	background:#25d366;
+	color:#fff;
+	border-radius:10px;
+	font-size:14px;
+	cursor:pointer;
+	line-height:1;
+	margin-bottom:10px;
+	-webkit-box-shadow:1px 1px 4px 0px rgba(0,0,0,.3);
+	-moz-box-shadow:1px 1px 4px 0px rgba(0,0,0,.3);
+	box-shadow:1px 1px 4px 0px rgba(0,0,0,.3)}
+.cresta-whatsapp-chat-button span{vertical-align:text-top}
+.cresta-whatsapp-chat-button svg#whatsapp-msng-icon-button{
+	width:24px;
+	height:24px;
+	vertical-align:text-bottom}
+body.rtl .cresta-whatsapp-chat-button svg#whatsapp-msng-icon-button{
+	margin-right:inherit;
+	margin-left:6px}
+.cresta-whatsapp-chat-container-button{
+	border-radius:10px;
+	box-shadow:0 1px 6px rgba(0,0,0,0.06),0 2px 32px rgba(0,0,0,0.16);
+	position:absolute;
+	opacity:0;
+	pointer-events:none;
+	-webkit-transition:opacity 160ms ease-in-out;
+	-moz-transition:opacity 160ms ease-in-out;
+	-o-transition:opacity 160ms ease-in-out;
+	transition:opacity 160ms ease-in-out}
+.cresta-whatsapp-chat-container-button.open{
+	opacity:1;pointer-events:all}
+.cresta-whatsapp-chat-container-button.top{
+	top:-20px;
+	left:50%;
+	transform:translate(-50%,-100%)
+	}
+.cresta-whatsapp-chat-container-button.bottom{
+	bottom:-20px;
+	left:50%;
+	transform:translate(-50%,100%)
+	}
+.cresta-whatsapp-chat-container-button.left{
+	bottom:0;
+	left:-20px;
+	transform:translate(-100%,50%)
+	}
+.cresta-whatsapp-chat-container-button.right{
+	bottom:0;
+	right:-20px;
+	transform:translate(100%,50%)
+	}
+.cresta-whatsapp-chat-overlay{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display:none
+}
+.cresta-whatsapp-chat-overlay.open{
+	display:block}
+@media all and (max-width:769px){
+.cresta-whatsapp-chat-box.onDesktop,.cresta-whatsapp-chat-overlay{display:none!important}}@media all and (min-width:769px){
+.cresta-whatsapp-chat-box.onMobile{display:none!important}}@media all and (max-width:600px){
+.cresta-whatsapp-chat-box{width:45px;height:45px;line-height:45px}
+.cresta-whatsapp-chat-box svg#whatsapp-msng-icon{width:20px;height:20px}
+.cresta-whatsapp-chat-box svg#whatsapp-msng-icon,.cresta-whatsapp-chat-box svg#close-icon{top:13px;left:12px}}

@@ -1,0 +1,43 @@
+.table{
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #050505;
+    position: static;
+    text-align: justify;
+    margin-top: 10px;
+    line-height: 90%;
+    letter-spacing: 0.1px;
+  }
+  .table th,
+  .table td {
+    padding: 0.50rem;
+    vertical-align: sub;
+    line-height: 90%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #dee2e6;
+    border-left: #b7b7b9;
+    
+  }
+
+
+
+.alert-danger .alert-dismissible .btn-close{
+  padding: 10px 15px;
+  margin-top: 25px;
+     float: left;
+     width: 100%;
+     border-bottom: solid rgba(26, 25, 25, 0.945) 1px;
+     margin-bottom: 25px;
+}
+
+.alert-dismissible .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 1.25rem 1rem;
+}
+
