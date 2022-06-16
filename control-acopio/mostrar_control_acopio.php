@@ -212,11 +212,10 @@
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; 2021 | MAYABIO |Certificadora de Productos Orgánicos</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
+                        <div>
+                                <a href="../politicas.index.html">Politica de privacidad</a>
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            
+                              
                             </div>
                         </div>
                     </div>

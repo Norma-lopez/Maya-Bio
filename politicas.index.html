@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Socios/Productores</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/form.css"/>
+        <link rel="stylesheet" href="css/tabla.css"/>
+        
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <style>
+        .logo img {
+            padding: 10px; 
+            margin: 1px; 
+            left: -right;
+            width: 100px;
+
+        }
+
+        .datos{
+            font-family: serif;
+        }
+
+
+        .close img {
+            padding: 1px;
+            margin: auto;
+            width: 29px;
+          
+    }
+    
+    </style>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <div class="logo">
+				<a class="navbar-brand" href="./principal/index.html" > <img src="./images/MAYABIO-BN.png" alt="#">
+				</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="" ><i class="fas fa-bars"></i></button>
+			</div>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Perfil
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Configuración
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" ></i>
+                            Cerrar sesión
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <br><br>
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="./solicitud/agregar.solicitud.php">
+                                <div class="sb-nav-link-icon">
+                                    <img src="./icon/solicitud.png" alt="">
+                                </div> Solicitud
+                            </a>
+                            <a class="nav-link" href="./ficha.inspeccion/agregar.inspeccion.php">
+                                <div class="sb-nav-link-icon">
+                                    <img src="./icon/inspector.png" width: 40px>
+                                </div> Ficha de Inspección
+                            </a>
+
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>Socios/productor
+
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="./index.php">Registrar Datos</a>
+                                    <a class="nav-link" href="./registro.php">Lista socios/productores</a>
+									<a class="nav-link" href="./parcelas/parcelas.php">Parcelas</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon">
+                                    <i class='fas fa-user-edit fa-1x' style='color:#8a8785'></i>
+                                </div> Inspector
+                            </a>
+
+                            <a class="nav-link" href="./parcelas/parcelas.php">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div> Parcelas
+                            </a>
+
+                            <a class="nav-link" href="./productos-agregar/productos.php">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div> Productos
+                            </a>
+                            
+                            <!--  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-user-cog"></i>
+                                </div> Configuración
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">Autentificacion
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="login.html">Login</a>
+                                        <a class="nav-link" href="register.html">Register</a>
+                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                    </nav>
+                                </div>
+                            </div> -->
+                            <div class="sb-sidenav-menu-heading">Registros</div>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                    <div class="sb-nav-link-icon">
+                                        <img src="./icon/registro.png">
+                                    </div> Formularios de Registro
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">    
+                                    <a class="nav-link" href="./registros/agregar-registro.php">Registro Actividades</a>
+                                    <a class="nav-link" href="./registro-cosecha/agregar.cosecha.php">Registro de cosecha</a>
+                                    <a class="nav-link" href="./control-acopio/control.acopio.php">Control de Acopio</a>
+                                    <a class="nav-link" href="./registro-capacitacion/capacitaciones.php">Registro Capacitaciones</a>
+                                </nav>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <hr>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-titulo">
+                        <div class="container">
+                        <br><br>
+                            <h4><strong>Políticas de Privacidad y Manejo de Datos Personales</strong></h4><br>
+                            <p style="text-align: justify;">En cumplimiento a la        <strong>LEY FEDERAL DE PROTECCIÓN DE DATOS PERSONALES EN POSESIÓN DE LOS PARTICULARES (LFPDPPP)</strong> le informamos nuestra Política y damos a conocer el <strong>AVISO DE PRIVACIDAD</strong> previo al tratamiento de los datos personales, de conformidad con el artículo 15 de la <strong>LFPDPPP</strong> en donde se informa a los titulares los datos que se recaban y con qué fines.</p>
+                            <ol>
+                            <li><strong> Identidad y Domicilio del Responsable de la protección de sus datos personales.</strong></li>
+                            <li>Responsables de la protección de datos personales.</li>
+                            </ol>
+                            <p style="text-align: justify;">Mayacert México S. C. en adelante  <strong>«MAYABIO»</strong> con domicilio en Heroica Escuela Naval Militar No. Ext. 621 int. 303, Col. Reforma, 68050, Oaxaca de Juárez, Oaxaca, con número telefónico (951) 52 29 667, es responsable del tratamiento de sus datos personales, en términos de los artículos 3° fracción XIV, 14, 15 y 16 de la <strong>LFPDPPP.</strong></p>
+                            <ol>
+                            <li>Datos personales que pueden recabarse.</li>
+                            </ol>
+                            <p style="text-align: justify;">Al solicitar servicios a  <strong>« MAYABIO »</strong> o al entregar solicitud y/o contrato como prestador de servicios dentro de la institución, usted acepta que se recaben los datos personales necesarios como parte de nuestros procedimientos. La <strong>« MAYABIO » </strong>podrá recabar datos de manera enunciativa-, más no limitativa:</p>
+                            <ol>
+                            <li><strong> a) De los clientes:</strong></li>
+                            </ol>
+                            <p>Nombre completo/Razón social, Dirección, Actividad Comercial.</p>
+                            <ol>
+                            <li><strong> b) De los prestadores de servicio:</strong></li>
+                            </ol>
+                            <p>Nombre completo/Razón social, sexo, fecha de nacimiento, especialidad, lugar de residencia, lugar de procedencia, identificación oficial, CURP, cedula fiscal, comprobante de domicilio.</p>
+                            <ol>
+                            <li><strong> c) Información fiscal para facturación:</strong></li>
+                            </ol>
+                            <p style="text-align: justify;">Razón Social o nombre del contribuyente, Registro Federal de Contribuyentes, domicilio fiscal (calle, número, colonia, municipio, estado, país y código postal), teléfono, correo electrónico del contribuyente, cuenta bancaria para el pago por transferencia, cuenta de banco proveniente de sus pagos y cédula fiscal.</p>
+                            <ol>
+                            <li><strong> Finalidad del tratamiento de datos</strong></li>
+                            </ol>
+                            <p style="text-align: justify;">Conforme con lo señalado de los artículos 15 y 16 de la <strong>LFPDPPP</strong>, 26, 27 y 28 del Reglamento de la Ley, le informamos que sus datos generales, financieros y patrimoniales serán recabados personalmente a través de medios electrónicos e impresos para ser utilizados por  <strong>“MAYABIO”</strong> para las siguientes finalidades:</p>
+                            <ol>
+                            <li>Confirmar y corregir la información que sabemos sobre usted para garantizar su derecho de los datos personales.</li>
+                            <li>La posible comunicación de tus datos a terceros, así como la causa de dicha comunicación. A estos efectos, informamos que no cederemos datos personales a terceros salvo cuando exista una obligación legal</li>
+                            </ol>
+                            <p>Con el objetivo de proporcionar información a personas que estén dispuestas ha comunicarse y saber más de usted.</p>
+                            <p><strong>III. Opciones y Medios que el responsable ofrezca a los titulares para limitar el uso o divulgación de los datos.</strong></p>
+                            <p style="text-align: justify;">Todos los campos que aparezcan señalados con un asterisco (*) en los formularios serán de obligada cumplimentación, de tal modo que la omisión de alguno de ellos podría derivar en la imposibilidad que se te puedan facilitar los servicios solicitados. Deberás proporcionar información verídica, quedando prohibido el uso más allá o medios para ocultar tu identidad, con excepción de los casos en que el mismo formulario te solicite de manera expresada la creación de un nombre de usuario, nick o alias.</p>
+                            <p style="text-align: justify;">No podrás, a la hora de crear nombres de usuario o claves de acceso, o de facilitar cualesquiera datos que se te puedan pedir en los diferentes formularios existentes, elegir expresiones o conjuntos gráfico-denominativos malsonantes, injuriosos, coincidentes con marcas, nombres comerciales, rótulos de establecimientos, denominaciones sociales, expresiones publicitarias, nombres o pseudónimos de personajes de relevancia pública o famosos para cuya utilización no estés autorizado, y, en general, contrarios a la ley o a las exigencias de la moral y las buenas costumbres generalmente aceptadas.</p>
+                            <p style="text-align: justify;">Es indispensable que resguardes en todo momento los números de referencia, contraseñas y códigos de acceso que crees o te sean provistos. Serás el único responsable en caso del uso, autorizado o no, de tu cuenta personal, y en este sentido te comprometes a hacer un uso diligente de dicha información, a no ponerla a disposición de terceros, y a comunicar su pérdida o robo.</p>
+                            <p style="text-align: justify;">Asimismo, al hacer “click” en el botón “Acepto” (o equivalente) incorporado en los citados formularios, declaras que la información y los datos que en ellos has facilitado son exactos y veraces.</p>
+                            <ol>
+                            <li><strong> Medios para ejercer los derechos de acceso, rectificación cancelación u oposición de conformidad con lo dispuesto en esta Ley.</strong></li>
+                            </ol>
+                            <p>Podrás ejercer los siguientes derechos:</p>
+                            <ol>
+                            <li>Derecho de acceso a sus datos personales para saber cuáles están siendo objeto de tratamiento y las operaciones de tratamiento llevadas a cabo con ellos.</li>
+                            <li>Derecho de rectificación de cualquier dato personal inexacto.</li>
+                            <li>Derecho de supresión de sus datos personales, cuando esto sea posible.</li>
+                            <li>Derecho a solicitar la limitación del tratamiento de sus datos personales cuando la exactitud, la legalidad o la necesidad del tratamiento de los datos resulte dudosa, en cuyo caso, podremos conservar los datos conservarlos para el ejercicio o la defensa de reclamaciones.</li>
+                            <li>Derecho de oposición al tratamiento de tus datos personales, cuando la base legal que nos habilite para su tratamiento sea el interés legítimo. La Sociedad dejará de tratar sus datos salvo que tenga un interés legítimo imperioso o para la formulación, el ejercicio o la defensa de reclamaciones.</li>
+                            <li>Derecho a la portabilidad de tus datos, cuando la base legal que nos habilite para su tratamiento sea la existencia de una relación contractual o tu consentimiento.</li>
+                            <li>Derecho a revocar el consentimiento otorgado a la Sociedad.</li>
+                            <li><strong> Transferencia de datos</strong></li>
+                            </ol>
+                            <p style="text-align: justify;">En casos especiales, y contando con la protección de la Ley Federal de Protección de Datos en Posesión de Particulares, los datos personales recabados podrán ser transferidos y tratados por personas o instituciones distintas  “<strong>MAYABIO</strong>”:</p>
+                            <ol>
+                            <li>Asociaciones, organismos, instituciones y dependencias del ámbito nacional e internacional, de carácter público, privado o gubernamental.</li>
+                            <li><strong> Procedimiento y medio por el cual el responsable comunicará a los titulares de cambios al aviso de privacidad, de conformidad con lo previsto en esta Ley.</strong></li>
+                            </ol>
+                            <p style="text-align: justify;">Este aviso de privacidad podrá ser modificado por  <strong>“MAYABIO” </strong>en forma discrecional. Dichas modificaciones serán informadas a través de la página oficial o cualquier otro medio de comunicación que la <strong>“MAYABIO” </strong>determine oportuno para tal efecto.</p>
+                            <p>Fecha de publicación de este aviso de privacidad: 01 de Marzo de 2020, Versión 1</p>
+            
+                        </div>   
+                </main>
+                <br>
+                
+            </div>
+        </div>
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Seguro que desea salir?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <a class="btn btn-primary" href="../admi/logout.php">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
+    </body>
+</html>

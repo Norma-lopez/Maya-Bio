@@ -171,7 +171,7 @@
                             $row = $resultado->fetch_assoc();
                         ?>
 
-                        <h1 class="mt-4">CONTROL DE ACOPIO</h1>
+                        <h1 class="mt-4">Editar registro Control de acopio</h1>
                         <p><a href="mostrar_control_acopio.php">Control acopio</a> &raquo; Editar:</p>
 
                         <div class="card mb-4">
@@ -279,11 +279,10 @@
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; 2021 | MAYABIO |Certificadora de Productos Orgánicos</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
+                        <div>
+                                <a href="../politicas.index.html">Politica de privacidad</a>
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            
+                              
                             </div>
                         </div>
                     </div>
